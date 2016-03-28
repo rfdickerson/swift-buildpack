@@ -67,7 +67,7 @@ dependencies:
   - name: swift
     version: DEVELOPMENT-SNAPSHOT-2016-03-01-a-dispatch
     uri: https://www.dropbox.com/s/bk0bcxnptwn70fn/swift-DEVELOPMENT-SNAPSHOT-2016-03-01-a-ubuntu14.04-dispatch.tar.gz
-    md5: e2193be252596df62cc60afdfb88380b
+    md5: 2e4e0ac6fb1c3ccb3a14ef7985f02375
     cf_stacks:
       - cflinuxfs2
 
