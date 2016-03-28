@@ -60,14 +60,8 @@ dependencies:
       - cflinuxfs2
   - name: swift
     version: DEVELOPMENT-SNAPSHOT-2016-03-01-a
-    uri: https://swift.org/builds/development/ubuntu1404/swift-DEVELOPMENT-SNAPSHOT-2016-03-01-a/swift-DEVELOPMENT-SNAPSHOT-2016-03-01-a-ubuntu14.04.tar.gz
-    md5: 4ccc3f14cbd6ca549e455da78d115835
-    cf_stacks:
-      - cflinuxfs2
-  - name: swift
-    version: ibm-dispatch
     uri: http://rfdickerson.com/swift/swift-DEVELOPMENT-SNAPSHOT-2016-03-01-a-ubuntu14.04-dispatch.tar.gz
-    md5: 2e4e0ac6fb1c3ccb3a14ef7985f02375
+    md5: 4ccc3f14cbd6ca549e455da78d115835
     cf_stacks:
       - cflinuxfs2
 
