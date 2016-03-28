@@ -124,20 +124,20 @@ fi
 SWIFT_PATH=$CACHE_DIR/$(echo $SWIFT_NAME_VERSION/swift*)
 
 # download and unpack clang
-#if [[ ! -d "$CACHE_DIR/$CLANG_NAME_VERSION" ]]; then
-#  status "Installing Clang $CLANG_VERSION"
-#  mkdir -p $CLANG_NAME_VERSION
-#  dependency=$($compile_buildpack_dir/compile-extensions/bin/download_dependency $CLANG_NAME_VERSION.tar.xz /tmp)
-#  echo "Downloaded Clang" | indent
-#  echo $dependency | xz -d -c --files | tar x -C $CLANG_NAME_VERSION &> /dev/null
-#fi
-#CLANG_PATH=$CACHE_DIR/$(echo $CLANG_NAME_VERSION/clang*)
+if [[ ! -d "$CACHE_DIR/$CLANG_NAME_VERSION" ]]; then
+  status "Installing Clang $CLANG_VERSION"
+  mkdir -p $CLANG_NAME_VERSION
+  dependency=$($compile_buildpack_dir/compile-extensions/bin/download_dependency $CLANG_NAME_VERSION.tar.xz /tmp)
+  echo "Downloaded Clang" | indent
+  echo $dependency | xz -d -c --files | tar x -C $CLANG_NAME_VERSION &> /dev/null
+fi
+CLANG_PATH=$CACHE_DIR/$(echo $CLANG_NAME_VERSION/clang*)
 
-#export PATH="$SWIFT_PATH/usr/bin:$CLANG_PATH/bin:$PATH"
-export PATH="$SWIFT_PATH/usr/bin"
+export PATH="$SWIFT_PATH/usr/bin:$CLANG_PATH/bin:$PATH"
+#export PATH="$SWIFT_PATH/usr/bin"
 
 #install libdispatch
-git clone https://github.com/apple/swift-corelibs-libdispatch.git && cd swift-corelibs-libdispatch && git submodule init && git submodule update && sh ./autogen.sh && ./configure --with-swift-toolchain=$SWIFT_PATH/usr --prefix=$SWIFT_PATH/usr && make && make install
+#git clone https://github.com/apple/swift-corelibs-libdispatch.git && cd swift-corelibs-libdispatch && git submodule init && git submodule update && sh ./autogen.sh && ./configure --with-swift-toolchain=$SWIFT_PATH/usr --prefix=$SWIFT_PATH/usr && make && make install
 
 cd $BUILD_DIR
 status "Building Package"
