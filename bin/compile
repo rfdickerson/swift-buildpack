@@ -166,5 +166,8 @@ mkdir -p $BUILD_DIR/.profile.d
 set-env() {
   echo "export $1=$2" >> $PROFILE_PATH
 }
+
+ls -la $BUILD_DIR/.swift-bin
+
 set-env PATH '$HOME/.swift-bin:$PATH'
-set-env LD_LIBRARY_PATH '$HOME/.swift-lib'
+set-env LD_LIBRARY_PATH '$HOME/.swift-lib:$LIBRARY_PATH'
