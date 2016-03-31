@@ -141,6 +141,8 @@ export PATH="$SWIFT_PATH/usr/bin:$CLANG_PATH/bin:$PATH"
 #install libdispatch
 #git clone https://github.com/apple/swift-corelibs-libdispatch.git && cd swift-corelibs-libdispatch && git submodule init && git submodule update && sh ./autogen.sh && ./configure --with-swift-toolchain=$SWIFT_PATH/usr --prefix=$SWIFT_PATH/usr && make && make install
 
+ls -la $BUILD_DIR/.apt/usr/lib
+
 cd $BUILD_DIR
 status "Building Package"
 rm -rf Packages/
