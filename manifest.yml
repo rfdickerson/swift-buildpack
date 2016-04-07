@@ -64,6 +64,12 @@ dependencies:
     md5: e2193be252596df62cc60afdfb88380b
     cf_stacks:
       - cflinuxfs2
+  - name: swift
+    version: DEVELOPMENT-SNAPSHOT-2016-03-24-a
+    uri: https://www.dropbox.com/s/2wcczyx5spex9ux/swift-3-24-dispatch.tar.gz?dl=0
+    md5: 641438d728bbde8d3450c1f3d60f9566
+    cf_stacks:
+      - cflinuxfs2
 
 exclude_files:
   - .git/
